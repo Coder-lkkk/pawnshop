@@ -12,6 +12,7 @@
 8.有待完善...<br>
 
 # 使用技术
-1.Spring + SpringMVC + Mybatis<br>
-2.Layui jquery<br>
-3.Mysql<br>
+1.后台框架：Spring + SpringMVC + Mybatis<br>
+2.前端框架：Layui jquery<br>
+3.异步交互：ajax<br>
+4.数据库：Mysql<br>
