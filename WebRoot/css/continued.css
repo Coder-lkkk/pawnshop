@@ -1,0 +1,254 @@
+
+/* 公共样式表css */
+html,body {
+	color: #333;
+	margin: 0;
+	height: 100%;
+	font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+img {
+	border: 0;
+}
+
+body {
+	background: #fff;
+	color: #666;
+	font: 12px/150% Arial,Verdana, "microsoft yahei";
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #08acee;
+}
+
+
+img {
+	border: 0;
+}
+
+button,input,optgroup,select,textarea {
+	margin: 0;
+	font: inherit;
+	color: inherit;
+	outline: none;
+}
+
+.submit_btn{
+	width: 120px;
+	height: 40px;
+	font-size: 20px;
+	border-radius: 5px;
+	text-align: center;
+	margin-left: 400px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: firebrick;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #666;
+}
+
+a:hover {
+	color: #eee;
+}
+
+
+/*--header--*/
+/*--header--*/
+.xu_box_header{
+	height: 110px;
+	background-color: white;
+
+}
+.xu_box_header .xu_box_header_content{
+	height: 100%;
+}
+.xu_box_header .xu_box_header_content ul{
+	width: 400px;
+	position: relative;
+	left: 80px;
+}
+.xu_box_header .xu_box_header_content ul li::before{
+	content: " ";
+
+}
+.xu_box_header .xu_box_header_content ul li{
+	height: 110px;
+	float: left;
+	text-align: center;
+	line-height: 110px;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+
+.xu_box_header .xu_box_header_content a.back{
+	font-size: 1.5em;
+	float: right;
+	text-align: center;
+	line-height: 110px;
+	color: #e11b1b;
+	margin-right:100px;
+}
+/* 1. Strat Default css*/
+.miktu_title{
+	margin-bottom: 95px;
+}
+.miktu_title h4{
+	font-size: 20px;
+	font-weight: 200;
+}
+.hover_area{
+	margin-bottom: 30px;
+}
+.hover_area_8{
+	overflow: hidden;
+	position: relative;
+}
+
+.hover_img_8{
+	overflow: hidden;
+	position: relative;
+}
+
+.hover_img_8 img{
+	width: 100%;
+	height: 100%;
+}
+/* End Default css*/
+
+
+/*
+	9. Start hover style 8
+*/
+.hover_img_8 img{
+	transform: scale(1);
+	transition: all .5s;
+}
+.hover_area_8:hover .hover_img_8 img{
+	transform: scale(1.3);
+}
+.hover_area_8:hover .hover_overlay_8{
+	opacity: .8;
+    visibility: visible;
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -o-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.hover_area_8:hover .hover_content_8{
+	opacity: 1;
+	visibility: visible;
+}
+.hover_overlay_8{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    background: #f20909;
+    -webkit-transition: all .5s ease .1s;
+    -o-transition: all .5s ease .1s;
+    transition: all .5s ease .1s;
+    -webkit-transform: scale3d(0, 1, 0);
+    -ms-transform: scale3d(0, 1, 0);
+    -o-transform: scale3d(0, 1, 0);
+    transform: scale3d(0, 1, 0);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+}
+.hover_content_8{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .5s;
+}
+.hover_content_8 h4{
+	color: #fff;
+}
+.hover_content_8 ul {
+	margin-top: 20px;
+}
+.hover_content_8 ul li{
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.hover_content_8 ul li a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	background: #fff;
+	color: #f20909;
+	font-size: 14px;
+}
+/*
+	End hover style 8
+*/
+/*
+	12. Start Footer area css
+*/
+.miktu_footer{
+	background: #4f93e1;
+	padding: 40px 0;
+}
+.miktu_footer .footer_text{
+	text-align: center;
+}
+.miktu_footer .footer_text p{
+	color: #fff;
+	font-size: 16px;
+}
+/*
+	End Footer area css
+*/
+
+/*
+   13. Start Responsive css
+*/
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.miktu_title h1 {
+	    font-size: 28px;
+	}
+	
+}
+/*
+    End Responsive css
+*/

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- typeAliases是用来设置别名 即Po包里的类都能以小写字母来充当别名 -->
+	<typeAliases>
+		<package name="com.pawnshop.po" />
+	</typeAliases>
+	
+</configuration>

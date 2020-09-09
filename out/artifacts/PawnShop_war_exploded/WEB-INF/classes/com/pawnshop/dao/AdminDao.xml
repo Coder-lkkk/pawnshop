@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pawnshop.dao.AdminDao">
+	
+	<!--  查询珠宝列表 -->
+	<select id="findJList" resultType="jewellery">
+		select * from Jewellery limit #{page},#{limit}
+	</select>
+	
+	<!--  查询待审核的珠宝列表 -->
+	<select id="findReviewJList" resultType="jewellery">
+		select * from Jewellery where jState = '待续当审核' or jState = '待赎当审核' or jState = '待典当审核' limit #{page},#{limit}
+	</select>
+	
+	<!--  根据id查珠宝信息 -->
+	<select id="findJInfo" resultType="jewellery">
+		select * from Jewellery where jId = #{jid}
+	</select>
+	
+	<!-- 修改珠宝状态 -->
+	<update id="changeJstate" >
+		update jewellery set
+		jState=#{state}
+		where jId=#{jid}
+	</update>
+	
+	<!-- 查询用户列表 -->
+	<select id="findUList" resultType="user">
+		select * from user limit #{page},#{limit}
+	</select>
+	
+	<!-- 根据id查用户信息 -->
+	<select id="findUInfo" resultType="user">
+		select * from user where uId = #{uid}
+	</select>
+	
+	<!-- 修改用户信息 -->
+	<update id="updateUser" parameterType="user">
+		update user set
+		username=#{user.username},password=#{user.password},uCard=#{user.ucard},tel=#{user.tel},uemail=#{user.uemail},uaddress=#{user.uaddress}
+		where uId=#{user.uid}
+	</update>
+	
+</mapper>

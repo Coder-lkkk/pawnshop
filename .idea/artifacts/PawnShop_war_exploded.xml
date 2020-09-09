@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="PawnShop:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/PawnShop_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="PawnShop" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="junit4" module-name="PawnShop" />
+          <element id="library" level="module" name="json-lib-2.2.3-jdk15.jar" module-name="PawnShop" />
+          <element id="library" level="module" name="fastjson-1.2.9.jar" module-name="PawnShop" />
+          <element id="library" level="project" name="ant-1.9.6" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="PawnShop/web/Web" />
+    </root>
+  </artifact>
+</component>

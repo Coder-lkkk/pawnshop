@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pawnshop.dao.PawnDao">
+
+<!-- 添加金属当品 -->
+	<insert id="insertMetal" parameterType="com.pawnshop.po.Metal">
+    insert into metal (mId, mName, mState, 
+      mType, mPreMoney, mPwanMoney, 
+      mSaleMoney, mPurity, mUsage, 
+      mStyle, mOther, mCounts, 
+      mPhoto, uId)
+    values (#{mid,jdbcType=INTEGER}, #{mname,jdbcType=VARCHAR}, #{mstate,jdbcType=VARCHAR}, 
+      #{mtype,jdbcType=VARCHAR}, #{mpremoney,jdbcType=DOUBLE}, #{mpwanmoney,jdbcType=DOUBLE}, 
+      #{msalemoney,jdbcType=DOUBLE}, #{mpurity,jdbcType=VARCHAR}, #{musage,jdbcType=DOUBLE}, 
+      #{mstyle,jdbcType=VARCHAR}, #{mother,jdbcType=VARCHAR}, #{mcounts,jdbcType=INTEGER}, 
+      #{mphoto,jdbcType=VARCHAR}, #{uid,jdbcType=INTEGER})
+      set
+  </insert>
+  
+  <!-- 添加珠宝当品 -->
+  <insert id="insertJewellery" parameterType="com.pawnshop.po.Jewellery">
+    insert into jewellery (jName, jBrand, 
+      jUsage, jPreMoney, jBuyTime, 
+      jPawnMoney, jSaleMoney, jState, 
+      jAttachment, jMaterial, jInMaterial, 
+      jWeight, jDiam, jLength, 
+      jPhoto, jOther, jCounts, 
+      jType, jStyle, jPawnTime, 
+      uId)
+    values (#{jname,jdbcType=VARCHAR}, #{jbrand,jdbcType=VARCHAR}, 
+      #{jusage,jdbcType=DOUBLE}, #{jpremoney,jdbcType=DOUBLE}, #{jbuytime,jdbcType=TIMESTAMP}, 
+      #{jpawnmoney,jdbcType=DOUBLE}, #{jsalemoney,jdbcType=DOUBLE}, #{jstate,jdbcType=VARCHAR}, 
+      #{jattachment,jdbcType=VARCHAR}, #{jmaterial,jdbcType=VARCHAR}, #{jinmaterial,jdbcType=VARCHAR}, 
+      #{jweight,jdbcType=VARCHAR}, #{jdiam,jdbcType=DOUBLE}, #{jlength,jdbcType=DOUBLE}, 
+      #{jphoto,jdbcType=VARCHAR}, #{jother,jdbcType=VARCHAR}, #{jcounts,jdbcType=VARCHAR}, 
+      #{jtype,jdbcType=VARCHAR}, #{jstyle,jdbcType=VARCHAR}, #{jpawntime,jdbcType=TIMESTAMP}, 
+      #{uid,jdbcType=INTEGER})
+  </insert>
+    
+  <!-- 添加钻石当品 -->
+    <insert id="insertDiamond" parameterType="diamond">
+    insert into diamond (dId, dName, dBrand, 
+      dType, dState, dShape, 
+      dCarat, dColor, dClarity, 
+      dCut, dSize, dPhoto, 
+      dPreMoney, dPawnMoney, dSaleMoney, 
+      dCounts, dOther, uId
+      )
+    values (#{did,jdbcType=INTEGER}, #{dname,jdbcType=VARCHAR}, #{dbrand,jdbcType=VARCHAR}, 
+      #{dtype,jdbcType=VARCHAR}, #{dstate,jdbcType=VARCHAR}, #{dshape,jdbcType=VARCHAR}, 
+      #{dcarat,jdbcType=DOUBLE}, #{dcolor,jdbcType=VARCHAR}, #{dclarity,jdbcType=VARCHAR}, 
+      #{dcut,jdbcType=VARCHAR}, #{dsize,jdbcType=DOUBLE}, #{dphoto,jdbcType=VARCHAR}, 
+      #{dpremoney,jdbcType=DOUBLE}, #{dpawnmoney,jdbcType=DOUBLE}, #{dsalemoney,jdbcType=DOUBLE}, 
+      #{dcounts,jdbcType=INTEGER}, #{dother,jdbcType=VARCHAR}, #{uid,jdbcType=INTEGER}
+      )
+  </insert>
+ <!-- 添加手表当品 --> 
+  <insert id="insertWatch" parameterType="watch">
+    insert into watch (wId, wName, wBrand, 
+      wUsage, wPreMoney, wBuyTime, 
+      wPawnMoney, wSaleMoney, wState, 
+      wAttachment, wStyle, caseMaterial, 
+      surMaterial, bandMaterial, wWeight, 
+      wDiam, wType, wOther, 
+      wPhoto, wCounts, uId
+      )
+    values (#{wid,jdbcType=INTEGER}, #{wname,jdbcType=VARCHAR}, #{wbrand,jdbcType=VARCHAR}, 
+      #{wusage,jdbcType=VARCHAR}, #{wpremoney,jdbcType=DOUBLE}, #{wbuytime,jdbcType=TIMESTAMP}, 
+      #{wpawnmoney,jdbcType=DOUBLE}, #{wsalemoney,jdbcType=DOUBLE}, #{wstate,jdbcType=VARCHAR}, 
+      #{wattachment,jdbcType=VARCHAR}, #{wstyle,jdbcType=VARCHAR}, #{casematerial,jdbcType=VARCHAR}, 
+      #{surmaterial,jdbcType=VARCHAR}, #{bandmaterial,jdbcType=VARCHAR}, #{wweight,jdbcType=VARCHAR}, 
+      #{wdiam,jdbcType=DOUBLE}, #{wtype,jdbcType=VARCHAR}, #{wother,jdbcType=VARCHAR}, 
+      #{wphoto,jdbcType=VARCHAR}, #{wcounts,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}
+      )
+  </insert>
+  
+  <!-- 修改珠宝当品状态 -->
+	<update id="updateJewelleryState" parameterType="String">
+		update jewellery set
+		jState=#{state}
+		where jId=#{jId}
+	</update>
+  <!-- 添加箱包当品 -->
+  <insert id="insertBag" parameterType="com.pawnshop.po.Bag">
+    insert into bag (bId, bName, bBrand, 
+      bUsage, bPerMoney, bBuyTime, 
+      bPwanMoney, bSaleMoney, bState, 
+      bAttachment, bLength, bPhoto, 
+      bOther, bCounts, uId
+      )
+    values (#{bid,jdbcType=INTEGER}, #{bname,jdbcType=VARCHAR}, #{bbrand,jdbcType=VARCHAR}, 
+      #{busage,jdbcType=DOUBLE}, #{bpermoney,jdbcType=DOUBLE}, #{bbuytime,jdbcType=TIMESTAMP}, 
+      #{bpwanmoney,jdbcType=DOUBLE}, #{bsalemoney,jdbcType=DOUBLE}, #{bstate,jdbcType=VARCHAR}, 
+      #{battachment,jdbcType=VARCHAR}, #{blength,jdbcType=DOUBLE}, #{bphoto,jdbcType=VARCHAR}, 
+      #{bother,jdbcType=VARCHAR}, #{bcounts,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}
+      )
+  </insert>
+  
+  <!-- 添加翡翠当品 -->
+  <insert id="insertStone" parameterType="stone">
+    insert into stone (sId, sName, sStyle, 
+      sState, sPreMoney, sPawnMoney, 
+      sSaleMoney, sSize, sWeight, 
+      sType, sOther, sPhoto, 
+      sCounts, uId)
+    values (#{sid,jdbcType=INTEGER}, #{sname,jdbcType=VARCHAR}, #{sstyle,jdbcType=VARCHAR}, 
+      #{sstate,jdbcType=VARCHAR}, #{spremoney,jdbcType=DOUBLE}, #{spawnmoney,jdbcType=DOUBLE}, 
+      #{ssalemoney,jdbcType=DOUBLE}, #{ssize,jdbcType=DOUBLE}, #{sweight,jdbcType=DOUBLE}, 
+      #{stype,jdbcType=VARCHAR}, #{sother,jdbcType=VARCHAR}, #{sphoto,jdbcType=VARCHAR}, 
+      #{scounts,jdbcType=VARCHAR}, #{uid,jdbcType=INTEGER})
+  </insert>
+  
+  <select id="findReviewList" resultType="Jewellery"> 
+  	select * from jewellery where jState = "待续当审核"
+  </select>
+</mapper>

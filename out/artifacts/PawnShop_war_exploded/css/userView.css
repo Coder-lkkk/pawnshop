@@ -1,0 +1,37 @@
+*{font-family: "microsoft yahei";box-sizing: border-box;padding: 0;margin: 0;color: inherit;}
+body{background: #f1f1f1;}
+img{border: none;}
+ul{list-style: none;}
+a{text-decoration: none;}
+.w1200{width: 1200px;height:auto;margin: 0 auto;overflow: hidden;font-size: 16px;}
+.header{width: 100%;height: auto;overflow: hidden;margin-bottom: 20px;}
+.header .bar{background:#bb3f41;height: 50px;line-height: 50px;color: #fff;}
+.header .bar .l{float: left; position: absolute;margin-left: 50px;}
+.header .bar .l font{font-size: 22px;border-left: 1px solid #fff;margin-left: 20px;padding-left: 20px;}
+.header .bar .r{float: right;}
+.header .bar .r i{padding-right: 10px;}
+.header .user-info{height: 100px;width: 100%;background: url(../images/user/user_info_bg.jpg) center center no-repeat;background-size: cover;}
+.header .user-info .user-headface{float: left;width: 75px;height: 75px;overflow: hidden;border-radius: 50%;margin-top: 12px;}
+.header .user-info .user-headface img{width: 100%;height: 100%;}
+.header .user-info .user-account{float: left;margin-top: 25px;padding-left: 20px;color: #666;}
+.header .user-info .user-account .tip{margin-bottom: 5px;}
+.header .user-info .user-account .account span{font-size: 13px;padding-right: 20px;}
+.header .user-info .user-modify{float: right;margin-top: 30px;width: 110px;height: 40px;text-align: center;line-height: 40px;color: #fff;background: #ff2e2b;border-radius: 5px;}
+.main .left{float: left;width: 200px;height: auto;overflow: hidden;margin-right: 20px;background: #fff;}
+.main .left ul li{width: 100%;height: 50px;line-height: 50px;color: #666666; padding-left: 20px;}
+/*.main .left ul li a{display: block;width: 100%;height: 100%;padding-left: 20px;}*/
+.main .left ul li i{font-size: 20px;padding-right: 5px;}
+.user_active{border-left: 3px solid #ff2e2b;background: #f3f7ed;color: #dd1110;}
+/*.main .left ul li a:hover{border-left: 3px solid #ff2e2b;background: #f3f7ed;color: #dd1110;}*/
+.main .right{float: left;width: 980px;height: auto;overflow: hidden;}
+.main .content{width: 100%;height: 960px;position: absolute;}
+.main .right .tap{width: 100%;height: 40px;border-bottom: 2px solid #ff2e2b;background: #f9fafa;}
+.main .right .tap span{display: block;width: 128px;height: 100%;line-height: 40px;color: #fff;text-align: center;background: #ff2e2b;}
+.main .right .content{width: 980px; height: 650px;}
+.main .right .content .container{width: 100%;height: 600px;overflow: hidden; background: #fff;}
+.main .right .content .container .no-doc{width: 100%;height: 600px;text-align: center;color: #999;font-size: 13px;}
+.main .right .content .container .no-doc img{padding-top: 80px;}
+.none{display: none;}
+
+
+

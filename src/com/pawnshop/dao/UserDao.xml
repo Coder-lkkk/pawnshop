@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pawnshop.dao.UserDao">
+	<!-- 查询用户 -->
+	<select id="findUser" parameterType="String" resultType="user">
+		select * from user
+		where username=#{username}
+		and password=#{password}
+	</select>
+	
+	<!--  根据用户名查用户 -->
+	<select id="findUserByName" parameterType="String" resultType="user">
+		select * from user
+		where username = #{username}
+	</select>
+	
+	<!--  查询用户典当物列表 -->
+	<select id="findPawnList" resultType="jewellery">
+		select * from Jewellery
+	</select>
+	
+	<!-- 修改用户资料 -->
+	<update id="updateInfo" parameterType="user">
+		update user set
+		username=#{user.username},password=#{user.password},tel=#{user.tel},uemail=#{user.uemail},uaddress=#{user.uaddress}
+		where uId=#{user.uid}
+	</update>
+	
+	<!-- 修改珠宝信息 -->
+	<update id="updateJewellery" parameterType="jewellery">
+		update jewellery set
+      	jName = #{jewellery.jname},
+      	jBrand = #{jewellery.jbrand},
+      	jUsage = #{jewellery.jusage},
+      	jPreMoney = #{jewellery.jpremoney},
+      	jBuyTime = #{jewellery.jbuytime},
+      	jPawnMoney = #{jewellery.jpawnmoney},
+      	jSaleMoney = #{jewellery.jsalemoney},
+      	jState = #{jewellery.jstate},
+      	jAttachment = #{jewellery.jattachment},
+      	jMaterial = #{jewellery.jmaterial},
+      	jInMaterial = #{jewellery.jinmaterial},
+      	jWeight = #{jewellery.jweight},
+     	jDiam = #{jewellery.jdiam},
+     	jLength = #{jewellery.jlength},
+      	jPhoto = #{jewellery.jphoto},
+      	jOther = #{jewellery.jother},
+      	jCounts = #{jewellery.jcounts},
+      	jType = #{jewellery.jtype},
+      	jStyle = #{jewellery.jstyle},
+      	jPawnTime = #{jewellery.jpawntime},
+      	uId = #{jewellery.uid}
+      	where jId = #{jewellery.jid}
+	</update>
+	
+	<!-- 查询所有图片 -->
+    <select id="list" resultType="user">
+    	select uid, uimage from user
+    </select>
+    	
+    <insert id="save" parameterType="user">
+    	insert into user(uimage) values(#{uimage})
+    </insert>
+</mapper>

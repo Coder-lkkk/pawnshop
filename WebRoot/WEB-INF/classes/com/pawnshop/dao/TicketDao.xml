@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pawnshop.dao.TicketDao">
+     <!--  将当票的状态改为待挂失审核-->
+	<update id="updateStateLoss" parameterType="Integer">
+		UPDATE ticket 
+		SET state = "待挂失审核" 
+		WHERE id = #{id}
+	</update>
+</mapper>
